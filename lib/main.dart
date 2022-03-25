@@ -42,7 +42,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: const Text(
                   'Android App',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Color.fromARGB(255, 33, 243, 233),
                       fontWeight: FontWeight.w500,
                       fontSize: 30),
                 )),
@@ -86,8 +86,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
+                     
+                    // print(nameController.text);
+                    // print(passwordController.text);
                   },
                 )
             ),
@@ -107,35 +108,42 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
             ),
           ],
-        ));
+        )
+         
+        );
   }
 }
 
-
-
-// ignore_for_file: unnecessary_new
-
-// import 'package:flutter/material.dart';
-// //import 'lib.dart';
-// //import 'screen_lista_citta.dart';
-
-// void main() {
-//   runApp(new MyApp());
-// }
-
-// class MyApp extends StatelessWidget
-// {
-//   @override
-//   Widget build(BuildContext context)
-//   {
-//     return MaterialApp(
-//       home: Material(
-//          child: Center(
-//            child: Container(
-//              child: Text("My Android App"),
-//       ), 
-//       ),
-//       ),
-//     );
-//   }
-// }
+class SecondScreen extends StatefulWidget{
+   @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: ListView(
+          children: <Widget>[
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'Android App',
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 33, 243, 233),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30),
+                )),
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text('Sign in', style: TextStyle(fontSize: 20),)
+                ),
+          ]
+        ),
+    
+    );
+}
+}
